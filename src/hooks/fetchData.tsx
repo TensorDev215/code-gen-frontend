@@ -11,14 +11,14 @@ export const getUsers = async (): Promise<UserType[]> => {
   return data
 }
 
-export const getSampleCode = async (): Promise<string> => {
+export const getSampleCode = async (prompt: string): Promise<string> => {
   const response = await fetch('http://localhost:8000/codes/generate', {
     method: 'POST',
     headers: {
       'Content-Type': 'application/json'
     },
     body: JSON.stringify({
-      prompt: 'Hello'
+      prompt: prompt
     })
   })
 
