@@ -6,6 +6,7 @@ import DashboardLayout from '../layout/Dashboard'
 import Page404 from '../pages/Page404'
 import Signin from '../pages/Auth/SignIn'
 import Signup from '../pages/Auth/SignUp'
+import VerifyEmail from '../pages/Auth/VerifyEmail'
 
 const routes = createBrowserRouter([
   {
@@ -37,6 +38,10 @@ const routes = createBrowserRouter([
   {
     path: '/signup',
     element: <Signup />
+  },
+  {
+    path: '/verify-email',
+    element: <VerifyEmail />
   }
 ])
 
