@@ -123,7 +123,8 @@ const Signup: React.FC = () => {
       }
 
       const data = await response.json()
-      console.log(data)
+      localStorage.setItem('verifyEmail', formData.email)
+      window.location.href = '/verify-email'
     } catch (error) {
       setErrors({
         general: 'Signup failed. Please try again.'
